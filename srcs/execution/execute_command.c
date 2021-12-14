@@ -6,7 +6,7 @@
 /*   By: ptorres <ptorres@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 19:48:22 by pablo             #+#    #+#             */
-/*   Updated: 2021/12/09 12:59:16 by ptorres          ###   ########.fr       */
+/*   Updated: 2021/12/14 13:08:24 by ptorres          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,8 @@ void	execute_commands(t_data *d)
 		d->cmds = d->cmds->childs;
 	}
 	waitpid(d->last_pid, &d->status, WUNTRACED);
-	d->status = WEXITSTATUS(d->status);
+	if (ch)
+		d->status = WEXITSTATUS(d->status);
 	d->asignation = 0;
 	d->cmds = first;
 }

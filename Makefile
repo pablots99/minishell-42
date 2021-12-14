@@ -22,6 +22,7 @@ SRCS =	minishell.c 							\
 		srcs/utils/utils3.c						\
 		srcs/utils/utils4.c						\
 		srcs/utils/utils5.c
+
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc -Wall -Werror -Wextra -g3
@@ -46,7 +47,6 @@ all:$(NAME)
 $(NAME):$(OBJS)
 	$(MAKE) bonus -C ./libft
 	$(CC) $(FLAGS) $(LIBFLAGS) $(OBJS)
-
 
 clean:
 	$(stty -echoctlexp)
