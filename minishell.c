@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pablo <pablo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ptorres <ptorres@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 12:02:38 by pablo             #+#    #+#             */
-/*   Updated: 2021/12/09 00:19:24 by pablo            ###   ########.fr       */
+/*   Updated: 2021/12/14 15:12:20 by ptorres          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	main(int argc, char **argv, char **env)
 	__init_vars(&data, env);
 	path_aux = get_env_ms(&data, "PATH");
 	data.paths = ft_split(path_aux, ':');
+	route = "\033[1;34mminishell$ \033[0m";
 	while (1)
 	{
 		if (g_status != 130)
@@ -57,7 +58,6 @@ int	main(int argc, char **argv, char **env)
 		signal(SIGQUIT, handle_sigquit2);
 		signal(SIGINT, handle_sigint);
 		data.cmds = NULL;
-		route = "\033[1;34mminishell$ \033[0m";
 		data.raw_cmd = readline(route);
 		if (!data.raw_cmd)
 			printf(""), exit(0);

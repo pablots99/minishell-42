@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pablo <pablo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ptorres <ptorres@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 12:03:32 by pablo             #+#    #+#             */
-/*   Updated: 2021/09/27 16:09:38 by pablo            ###   ########.fr       */
+/*   Updated: 2021/12/14 15:15:39 by ptorres          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ typedef struct s_cmds
 	char			*input_type;
 	char			*apppend;
 	int				err;
-	struct s_cmds	*childs;
 	int				comillas;
 	int				exit_cond;
+	struct s_cmds	*childs;
 }	t_cmds;
 
 typedef struct s_data
