@@ -6,12 +6,13 @@
 /*   By: ptorres <ptorres@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 12:03:32 by pablo             #+#    #+#             */
-/*   Updated: 2021/12/14 15:15:39 by ptorres          ###   ########.fr       */
+/*   Updated: 2021/12/14 17:23:45 by ptorres          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
+# define READLINE_LIBRARY 1
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -20,8 +21,7 @@
 # include "../libft/libft.h"
 # include <sys/types.h>
 # include <readline/readline.h>
-# include<readline/history.h>
-# include<readline/history.h>
+# include <readline/history.h>
 # include <fcntl.h>
 # include<signal.h>
 # include <sys/wait.h>
