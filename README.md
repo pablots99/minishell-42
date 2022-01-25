@@ -14,6 +14,7 @@ Pipe '|' is implemented,as aswell as sesion varsiables, enviromet variables, and
 1-> clone https://github.com/pablots99/minishell-42
 
 2-> make all
+		->if make fails because readline library: brew install readline
 
 3-> ./minishell
 
